@@ -44,3 +44,111 @@ nav ul li a {
 nav ul li a:hover{
     background-color: #9e2920;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 5px solid black;
+}
+
+table th {
+    background-color: #9e2920;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    text-align: center;
+}
+
+table tbody tr:nth-child(even){
+    background-color: bisque;
+}
+
+table tbody td:hover {
+    background-color: blueviolet;
+}
+
+table tbody tr:hover {
+    background-color: yellow;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 50%;
+    padding: 12px;
+    border: 5px solid black;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input:focus {
+    border-color: cornflowerblue;
+    outline: none;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #9e2920;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .hamburger {
+        display: block;
+    }
+
+    /* Lets hide the old menu */
+    nav ul {
+        display: none;
+
+        background-color: #9e2920;
+        padding: 0;
+    }
+
+    nav.active ul {
+        display: block;}
+    }
+
+    nav ul li a {
+        display: block;
+        border-radius: 0;
+        padding: 15px 25px;
+        border-bottom: 1px solid #9e2920;
+    }
+
+}
+
