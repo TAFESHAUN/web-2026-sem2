@@ -256,3 +256,10 @@ nav ul li a:hover {
       border-bottom: 1px solid rgba(182, 53, 70, 0.854);
    }
 }
+
+.petCard {
+   background-color: rgba(255, 255, 255, 0.527);
+   border-radius: 10px;
+   margin: 10px;
+   padding: 20px;
+}
