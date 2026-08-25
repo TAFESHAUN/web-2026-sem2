@@ -81,7 +81,15 @@
                 </tbody>
             </table>
         </section>
-    
+        
+        <!--TODO Build a quick filter using DOM-->
+        <div class="filter-buttons">
+            <button onclick="filterPets('All')">All</button>
+            <button onclick="filterPets('Dog')">Dogs</button>
+            <button onclick="filterPets('Cat')">Cats</button>
+            <button onclick="filterPets('other')">Other Animals</button>
+        </div>
+        <div id="message"></div>
         <div id="petList">
             <!--<div class="pet-card">
                 <h2>TEST</h2>
@@ -91,6 +99,7 @@
         </div>
     </main>
 
+    <br><br><br><br>
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Pawsome Pets | All Rights Reserved</p>
