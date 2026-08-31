@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Table Test</h2>
+    <!--Search & Filter table data when we learn JS-->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Student ID</th>
+        </tr>
+        <tr>
+            <td>Bob Jobs</td>
+            <td>40</td>
+            <td>B-</td>
+            <td>12341234</td>
+        </tr>
+        <tr>
+            <td>Jane Wells</td>
+            <td>29</td>
+            <td>A+</td>
+            <td>54542323</td>
+        </tr>
+        <tr>
+            <td>Frank</td>
+            <td>33</td>
+            <td>C+</td>
+            <td>90907888</td>
+        </tr>
+    </table>
+
+    <h2>Form Test</h2>
+    <form action="/submit" method="post">
+        <!--Text input example-->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="inputName" required>
+        <br><br>
+
+        <!--Email Example-->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="inputEmail" required>
+        <br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" minlength="5">
+
+        <!--Submit Example-->
+        <input type="submit" value="Send Away">
+
+    </form>
+    <script src="test.js"></script>
+</body>
+</html>
