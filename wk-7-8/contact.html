@@ -28,7 +28,7 @@
         
         <h2>Adoption Application Form</h2>
 
-      <form>  
+      <form id="adoptionForm" onsubmit="return submitApplication()">
             
             <!-- Name Input -->
             <label for="name">Your Name:</label>
@@ -60,7 +60,14 @@
             <button type="submit">Submit Application</button>
             
         </form>
-
+       
+        <br> <br>
+    <h2>Adoption Ticket Queue</h2>
+    <div class="petTicket">
+        <ul id="ticketListDisplay"></ul>
+    </div>
+    
+    <br> <br>
     </main>
 
     <!-- FOOTER -->
@@ -69,6 +76,6 @@
     </footer>
 
     <!-- //TODO - Week 4: Link JavaScript file here -->
-    <script src="script.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>
