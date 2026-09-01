@@ -6,10 +6,17 @@ function renderTickets() {
     let list = document.getElementById("ticketListDisplay");
     let html = "";
     for (let i = 0; i < ticketNames.length; i++) {
-        html += `<li><strong>Ticket ${i + 1}: ${ticketNames[i]}</strong><br>${ticketDetails[i]}</li>`;
+        html += `<li><strong>Ticket ${i + 1}: ${ticketNames[i]}</strong><br>${ticketDetails[i]} <button>X</button></li>`;
     }
     list.innerHTML = html === "" ?
         "<li>No adoption tickets...</li>" : html;
+
+    /*Something to consider > Add a button to:
+        Approve: Ticket resolved
+        Cancel: Ticket delete
+        Follow Up: Response 
+        Do something with cool X button that doesn't work right now   
+    */
 }
 renderTickets();
  
@@ -73,3 +80,32 @@ function searchTicket(){
     }
 
 }
+
+//Delete Algo
+function deleteTicketAt(index) {
+    for (let i = index; i < ticketNames.length - 1; i++) {
+        ticketNames[i] = ticketNames[i + 1];
+        ticketDetails[i] = ticketDetails[i + 1];
+    }
+    ticketNames.length = ticketNames.length - 1;
+    ticketDetails.length = ticketDetails.length - 1;
+}
+
+//TODO: We need to add a way to make tickets SOLVED
+// follow up chat, email, resolved 
+function cancelTicket() {
+    let name = document.getElementById("ticketSearchInput").value.trim();
+    let index = sequentialSearchTicket(name);
+ 
+    if (index === -1) {
+        document.getElementById("ticketResult").textContent =
+            `Can't cancel - no ticket found for "${name}".`;
+        return;
+    }
+ 
+    deleteTicketAt(index);
+    renderTickets();
+    document.getElementById("ticketResult").textContent =
+        `Cancelled the ticket for "${name}".`;
+}
+
